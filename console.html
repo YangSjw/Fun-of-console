@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">wrap</div>
+    <script>
+        var el = document.getElementById('box');
+
+        // console.log(el);
+
+        // console.dir(el);
+
+        // console.warn('这是一个警告');
+
+        // console.error('报错信息');
+
+        // console.info('输出信息');
+
+        const data = [
+            {
+                id: "7cb1-e041b126-f3b8",
+                seller: "WAL0412",
+                buyer: "WAL3023",
+                price: 203450,
+                time: 1539688433
+            },
+            {
+                id: "1d4c-31f8f14b-1571",
+                seller: "WAL0452",
+                buyer: "WAL3023",
+                price: 348299,
+                time: 1539688433
+            },
+            {
+                id: "b12c-b3adf58f-809f",
+                seller: "WAL0012",
+                buyer: "WAL2025",
+                price: 59240,
+                time: 1539688433
+            }
+        ];
+        // console.log(data)
+        // console.table(data, ['price','time']);
+
+        // console.assert(data.length === 1)
+
+        // for (let i = 0; i < 5; i++) {
+        //     console.count('odds');
+
+        //     console.countReset('odds'); // 重置计数器
+        // }
+
+
+        // console.time();
+        // const slowFunction = number => {
+        //     console.log(number)
+        // };
+        // for (i = 0; i < 4; ++i) {
+        //     slowFunction(i);
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // const timeFn = number => {
+        //     console.time('odds');
+
+        //     console.timeEnd('odds')
+        // }
+
+        // for (let i = 0; i < 10; i++) {
+        //     timeFn(i)
+        // }
+
+        // console.timeEnd();
+
+        let number = 1;
+        console.group('OutsideLoop');
+        console.log(number);
+        console.group('innerLoop')
+        for(let i = 0; i < 5; i++) {
+            number = i;
+            console.log(number)
+        }
+        console.groupEnd();
+
+        console.groupEnd();
+
+        console.log('All down now')
+    </script>
+</body>
+
+</html>
